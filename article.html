@@ -21,7 +21,7 @@
 	}
 	
 	.tabel {
-		background-color: #FF3333;
+		background-color: #66FFCC;
 		font-size: 17px;
 		font-weight: bold;
 	}
@@ -56,7 +56,7 @@
         list-style: none;
         position: relative;
         display: inline-table;
-        width: 100%;
+        width: 93%;
      }
 
     nav ul li{
@@ -84,9 +84,9 @@
 	</style>
 	<!-- End -->
 	
-	<!-- Load icon of this HTML : -->
+	<!-- Load Style CSS : -->
 	
-	<link href="favicon.ico" rel="shortcut icon">
+	<link href="button.css" rel="stylesheet" type="text/css">
 	
 	<!-- Load Music, so we can listen it in this HTML : -->
 	
@@ -109,18 +109,17 @@
 	
 	<table align="center" width="19%" cellpadding="7" border="0">
 	<tr>
-		<td align="center"><marquee style="color: #FF3300" scrollamount="2" direction="left"><b>Selamat Datang di Web Proyek Github-ku. Disini Anda bisa melihat-lihat fitur yang saya sediakan di web ini. Enjoy :)</b></marquee></td>
+		<td align="center"><marquee style="color: #FF3300" scrollamount="2" direction="left"><font size="+2"><b>Selamat Datang di Web Proyek Github-ku. Disini Anda bisa melihat-lihat fitur yang saya sediakan di web ini. Enjoy :)</b></font></marquee></td>
 	</tr>
 	</table>
 	
 	<nav>
-	<ul>
-		<li><a href="index.html">&nbsp;&nbsp;&nbsp;Beranda</a></li>
-		<li><a href="about.html">&nbsp;&nbsp;&nbsp;Tentang Kami</a></li>
-		<li><a href="article.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Artikel</a></li>
-		<li><a href="gallery.html">&nbsp;&nbsp;&nbsp;Galeri Foto</a></li>
-		<li><a href="video.html">&nbsp;&nbsp;&nbsp;&nbsp;Galeri Video</a></li>
-		<li><a href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;Kontak Kami</a></li>
+	&nbsp;&nbsp;&nbsp;&nbsp;<ul>
+		<li><a href="index.html"><img style="float: left" width="17" src="home.png">&nbsp;&nbsp;HOME</a></li>
+		<li><a href="about.html"><img style="float: left" width="17" src="about.png">&nbsp;&nbsp;ABOUT US</a></li>
+		<li><a href="article.html"><img style="float: left" width="17" src="article.png">&nbsp;&nbsp;ARTICLE</a></li>
+		<li><a href="gallery.html"><img style="float: left" width="17" src="photo.png">&nbsp;&nbsp;PICTURE GALLERY</a></li>
+		<li><a href="video.html"><img style="float: left" width="17" src="video.png">&nbsp;&nbsp;VIDEO GALLERY</a></li>
 	</ul>
 	</nav>
 	
@@ -146,12 +145,65 @@
 	
 	<div style="color: #FF6666" align="left">
 	<h2>
+	<!--
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><span><img width="18" src="lokasi.png">&nbsp;Wuhan, China</span></label>
-	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <label><span><img width="18" src="jam_hitam.png"> &nbsp;Kamis, 2 Juli 2020 | 15:53 WIB</span></label>
+	-->
+	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <label><span><img width="18" src="jam_hitam.png">
+	<!-- Menampilkan Hari, Bulan dan Tahun -->
+		<script type='text/javascript'>
+			<!--
+			var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'Oktober', 'November', 'Desember'];
+			var myDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth();
+			var thisDay = date.getDay(),
+			    thisDay = myDays[thisDay];
+			var yy = date.getYear();
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			//document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+			document.write(thisDay + ', ' + months[month] + ' ' + day + ' ' + ' ' + year);
+			//-->
+		</script> | 	<!-- Menampilkan Jam (Aktif) -->
+	<span id="clock"></span>
+		<script type="text/javascript">
+		<!--
+		function showTime() {
+		    var a_p = "";
+		    var today = new Date();
+		    var curr_hour = today.getHours();
+		    var curr_minute = today.getMinutes();
+		    var curr_second = today.getSeconds();
+		    if (curr_hour < 12) {
+		        a_p = "AM";
+		    } else {
+		        a_p = "PM";
+		    }
+		    if (curr_hour == 0) {
+		        curr_hour = 12;
+		    }
+		    if (curr_hour > 12) {
+		        curr_hour = curr_hour - 12;
+		    }
+		    curr_hour = checkTime(curr_hour);
+		    curr_minute = checkTime(curr_minute);
+		    curr_second = checkTime(curr_second);
+		 document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+		    }
+ 
+		function checkTime(i) {
+		    if (i < 10) {
+		        i = "0" + i;
+		    }
+		    return i;
+		}
+		setInterval(showTime, 500);
+		//-->
+		</script></span></label>
 	</h2>
 	</div>
 	
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
 	
 	<div class="tengah"> <font size="+3"><label><span>ARTIKEL</span></label></font> </div>
 	
