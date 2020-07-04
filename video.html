@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale="1.0>
+<title>Proyek Github-ku</title>
+
+<!-- Load favicon (this logo) in this HTML : -->
+
+<link href="favicon.ico" rel="shortcut icon">
+
+<!-- Script CSS for Gallery Video in this HTML : -->
+
+<style type="text/css">
+<!--
+
+body {
+		font-family: Calibri;
+		font-weight: bold;
+		font-size: 16px;
+		color: #FFFF66;
+		background-color: #66FF99;
+		/* NGGAK USAH PAKE PADDING :
+		padding-top: 50px;
+		padding-left: 50px;
+		*/
+	}
+	
+	.tabel {
+		background-color: #FF3333;
+		font-size: 17px;
+		font-weight: bold;
+	}
+	
+	.tengah {
+		text-align: center;
+		font-size: 25px;
+		font-weight: bold;
+		color: #FF3333;
+	}
+	
+	.bawah {
+		text-align: center;
+		background-color: #66CCFF;
+		font-size: 17px;
+		font-weight: bold;
+		color: #FFFF66;
+	}
+	
+	/* Style for Menu CSS */
+	    nav {
+		margin: auto;
+        text-align: center;
+        width: 70%;
+        font-family: arial;
+    } 
+
+    nav ul {
+        background:#37988e;
+        padding: 0 15px;
+		text-align: center;
+        list-style: none;
+        position: relative;
+        display: inline-table;
+        width: 93%;
+     }
+
+    nav ul li{
+        float:left;
+    }
+
+    nav ul li:hover{
+        background:#FFFF66;
+    }
+
+    nav ul li:hover a{
+        color:#000;
+    }
+
+    nav ul li a{
+        display: block;
+        padding: 25px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+ul {
+	/* Mengatur Letak Gallery */
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+ul li {
+	list-style: none;
+	display: inline;
+}
+
+video {
+	width: 420px;
+	height: 100%;
+	/* Mengatur jarak Video */
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+
+/* End */
+
+-->
+</style>
+	
+<!-- Load Button CSS : -->
+	
+<link href="button.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+	<!-- Konten bagian header (atas) : -->
+	
+	<table align="center" width="35%" cellpadding="7" border="0">
+	<tr>
+		<td align="center"><a href="index.html"><img src="logo.png" width="242"></a></td>
+	</tr>
+	</table>
+	
+	<table align="center" width="19%" cellpadding="7" border="0">
+	<tr>
+		<td align="center"><marquee style="color: #FF3300" scrollamount="2" direction="left"><b>Selamat Datang di Web Proyek Github-ku. Disini Anda bisa melihat-lihat fitur yang saya sediakan di web ini. Enjoy :)</b></marquee></td>
+	</tr>
+	</table>
+	
+	<nav>
+	<ul>
+		<li><a href="index.html"><img style="float: left" width="17" src="home.png">&nbsp;&nbsp;HOME</a></li>
+		<li><a href="about.html"><img style="float: left" width="17" src="about.png">&nbsp;&nbsp;ABOUT US</a></li>
+		<li><a href="article.html"><img style="float: left" width="17" src="article.png">&nbsp;&nbsp;ARTICLE</a></li>
+		<li><a href="gallery.html"><img style="float: left" width="17" src="photo.png">&nbsp;&nbsp;PICTURE GALLERY</a></li>
+		<li><a href="video.html"><img style="float: left" width="17" src="video.png">&nbsp;&nbsp;VIDEO GALLERY</a></li>
+	</ul>
+	</nav>
+	
+	<!-- End -->
+
+	<hr>
+
+	<!-- Bagian Konten : -->
+	
+	<div style="color: #FF6666" align="left">
+	<h2>
+	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <label><span><img width="18" src="jam_hitam.png">
+	<!-- Menampilkan Hari, Bulan dan Tahun -->
+		<script type='text/javascript'>
+			<!--
+			var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'Oktober', 'November', 'Desember'];
+			var myDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth();
+			var thisDay = date.getDay(),
+			    thisDay = myDays[thisDay];
+			var yy = date.getYear();
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			//document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+			document.write(thisDay + ', ' + months[month] + ' ' + day + ' ' + ' ' + year);
+			//-->
+		</script> | 	<!-- Menampilkan Jam (Aktif) -->
+	<span id="clock"></span>
+		<script type="text/javascript">
+		<!--
+		function showTime() {
+		    var a_p = "";
+		    var today = new Date();
+		    var curr_hour = today.getHours();
+		    var curr_minute = today.getMinutes();
+		    var curr_second = today.getSeconds();
+		    if (curr_hour < 12) {
+		        a_p = "AM";
+		    } else {
+		        a_p = "PM";
+		    }
+		    if (curr_hour == 0) {
+		        curr_hour = 12;
+		    }
+		    if (curr_hour > 12) {
+		        curr_hour = curr_hour - 12;
+		    }
+		    curr_hour = checkTime(curr_hour);
+		    curr_minute = checkTime(curr_minute);
+		    curr_second = checkTime(curr_second);
+		 document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+		    }
+ 
+		function checkTime(i) {
+		    if (i < 10) {
+		        i = "0" + i;
+		    }
+		    return i;
+		}
+		setInterval(showTime, 500);
+		//-->
+		</script></span></label>
+	</h2>
+	</div>
+
+<!-- Judul (header) : -->
+
+<div class="tengah"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="+3"><label><span><img width="23" src="video.png">&nbsp;VIDEO GALLERY</span></label></font> </div>
+
+<center>
+<ul>
+	<li>
+		<video id="" controls>
+			<source src="Opening.mp4" type="video/mp4">
+		</video>
+	</li>
+	<li>
+		<video id="" controls>
+			<source src="Closing.mp4" type="video/mp4">
+		</video>
+	</li>
+	<li>
+		<video id="" controls>
+			<source src="Tutorial Cara Mengatasi Baterai Laptop tidak Charge.mp4" type="video/mp4">
+		</video>
+	</li>
+	<li>
+		<video id="" controls>
+			<source src="Tutorial Cara Mengatasi HP Android Yang Lemot.mp4" type="video/mp4">
+		</video>
+	</li>
+</ul>
+</center>
+
+<!-- End -->
+
+</body>
+</html>
